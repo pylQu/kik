@@ -1,0 +1,5 @@
+C:/Users/jaqbm/source/repos/kikCmake/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/jaqbm/source/repos/kikCmake/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/jaqbm/source/repos/kikCmake/out/build/x64-debug/kikCmake/CMakeFiles/kikCmake.dir
+C:/Users/jaqbm/source/repos/kikCmake/out/build/x64-debug/kikCmake/CMakeFiles/edit_cache.dir
+C:/Users/jaqbm/source/repos/kikCmake/out/build/x64-debug/kikCmake/CMakeFiles/rebuild_cache.dir
