@@ -4,6 +4,8 @@
 int kolej = rand();
 bool wygrana = false;
 std::string ruchGracza;
+
+//jak nazwa wskazuje rysowanie planszy
 void plansza::rysowanie_planszy()
 {
     std::string plansza =
@@ -14,6 +16,8 @@ void plansza::rysowanie_planszy()
         "| " + pola[7] + " | " + pola[8] + " | " + pola[9] + " | \n";
     std::cout << plansza;
 };
+
+//losowanie kto zaczyna a nastepnie sprawdzanie kolejnosci tur
 char plansza::czyjaTura() {
     if (kolej % 2 == 0) {
         return 'o';
@@ -50,7 +54,7 @@ bool plansza::czyWygrana()
         return false;
     }
 }
-
+//ustwaianie pól na planszy jako X lub O oraz sprawdzanie czy nie dosz.³o do wygranej
 void plansza::ruch(int ruchGraczaPrim)
 {
 
@@ -81,7 +85,6 @@ void plansza::ruch(int ruchGraczaPrim)
 
     else
     {
-
         std::cout << "To pole jest ju¿ zajete, wybierz inne\n";
     }
 };

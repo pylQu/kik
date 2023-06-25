@@ -1,6 +1,9 @@
 #include "rozgrywka.h"
 volatile int pktX = 0;
 volatile int pktO = 0;
+
+
+//sprawdza poprawnosc wykonanego ruchu opcjonalnie prosi o powtórzenie
 int granie()
 {
     plansza planszagry;
@@ -47,6 +50,7 @@ while (rozgrywkaWtoku)
 }
 
 }
+//Liczenie punktów
 void dodajpunkt(char gracz) {
     if (gracz == 'X')
     {
@@ -57,6 +61,7 @@ void dodajpunkt(char gracz) {
         pktO++;
     }
 };
+//wyswietla wynik
 void napiszWynik()
 {
     std::cout << "X " << pktX << " : " << pktO << " ()\n";
