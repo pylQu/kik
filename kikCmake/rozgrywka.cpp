@@ -1,6 +1,6 @@
 #include "rozgrywka.h"
-volatile int pktX = 0;
-volatile int pktO = 0;
+volatile float pktX = 0;
+volatile float pktO = 0;
 
 
 //sprawdza poprawnosc wykonanego ruchu opcjonalnie prosi o powtórzenie
@@ -36,7 +36,7 @@ while (rozgrywkaWtoku)
         return 0;
     }
 
-    else if (std::stoi(ruchGracza) < 10 && std::stoi(ruchGracza) > 0)
+    else if (std::stoi(ruchGracza) < 10 && std::stoi(ruchGracza) > 0 )
     {
 
         planszagry.ruch(std::stoi(ruchGracza));

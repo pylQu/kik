@@ -2,6 +2,7 @@
 #include "rozgrywka.h"
 
 int kolej = rand();
+int decyd=rand();
 bool wygrana = false;
 std::string ruchGracza;
 
@@ -20,10 +21,12 @@ void plansza::rysowanie_planszy()
 //losowanie kto zaczyna a nastepnie sprawdzanie kolejnosci tur
 char plansza::czyjaTura() {
     if (kolej % 2 == 0) {
-        return 'o';
+        
+        return 'X';
     }
     else {
-        return 'x';
+        
+        return '0';
     }
 }
 //sprawdzanie po ka¿dym ruchu czy wykonuj¹cy ruch gracz wygra³
@@ -31,28 +34,29 @@ bool plansza::czyWygrana()
 {
     if ((pola[1] == pola[2] && pola[2] == pola[3]) ||
         (pola[4] == pola[5] && pola[5] == pola[6]) ||
-        (pola[7] == pola[8] && pola[8] == pola[9])) 
+        (pola[7] == pola[8] && pola[8] == pola[9]))
     {
 
         return true;
     }
     else if ((pola[1] == pola[4] && pola[4] == pola[7]) ||
         (pola[2] == pola[5] && pola[5] == pola[8]) ||
-        (pola[3] == pola[6] && pola[6] == pola[9])) 
+        (pola[3] == pola[6] && pola[6] == pola[9]))
     {
         return true;
     }
     else if ((pola[1] == pola[5] && pola[5] == pola[9]) ||
-        (pola[3] == pola[5] && pola[5] == pola[7])) 
+        (pola[3] == pola[5] && pola[5] == pola[7]))
     {
-        
+
         return true;
-        
+
     }
+  
     else 
-    {
+   {
         return false;
-    }
+   }
 }
 //ustwaianie pól na planszy jako X lub O oraz sprawdzanie czy nie dosz.³o do wygranej
 void plansza::ruch(int ruchGraczaPrim)
@@ -65,7 +69,7 @@ void plansza::ruch(int ruchGraczaPrim)
 
         if (czyWygrana())
         {
-            //rysowanie_planszy(pola);                   
+                               
             std::cout << "Wygral " << czyjaTura() << "\n";
             
             
@@ -73,19 +77,19 @@ void plansza::ruch(int ruchGraczaPrim)
             dodajpunkt(czyjaTura());
         }
 
-        if (kolej == 9 && !wygrana)
+        else if ((kolej == 9 || kolej==10) && wygrana==false)
         {
-            //rysowanie_planszy(pola);
+            wygrana = true;
+            
             std::cout << "Remis\n";
             
-            wygrana = true;
         }
         kolej++;
     }
 
     else
     {
-        std::cout << "To pole jest ju¿ zajete, wybierz inne\n";
+        std::cout << "To pole jest juz zajete, wybierz inne\n";
     }
 };
 

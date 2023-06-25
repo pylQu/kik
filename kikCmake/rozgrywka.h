@@ -5,6 +5,7 @@
 #include <conio.h>
 #include "plansza.h"
 #include <stdlib.h>
+#include <time.h>
 
 
 int granie();
